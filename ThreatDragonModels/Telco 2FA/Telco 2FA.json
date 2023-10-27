@@ -1,0 +1,16 @@
+{
+  "version": "2.0.8",
+  "summary": {
+    "title": "Telco 2FA",
+    "owner": "Marius",
+    "description": "2FA von Telco",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [],
+    "diagramTop": 0,
+    "reviewer": "Martin+Yannik",
+    "threatTop": 0
+  }
+}
