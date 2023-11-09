@@ -162,8 +162,8 @@
           },
           {
             "position": {
-              "x": 910,
-              "y": 360
+              "x": 690,
+              "y": 450
             },
             "size": {
               "width": 120,
@@ -238,16 +238,16 @@
           },
           {
             "position": {
-              "x": 270.99999999999994,
-              "y": 203
+              "x": 250.99999999999994,
+              "y": 193
             },
             "size": {
-              "width": 100,
-              "height": 100
+              "width": 120,
+              "height": 110
             },
             "attrs": {
               "text": {
-                "text": "Other Mobile\nPhone OTT\nService"
+                "text": "AllSecure Mobile\nPhone OTT\nService"
               },
               "body": {
                 "stroke": "#333333",
@@ -260,7 +260,7 @@
             "zIndex": 9,
             "id": "166a4763-016a-486b-92df-a86adc8bab82",
             "data": {
-              "name": "Other Mobile\nPhone OTT\nService",
+              "name": "AllSecure Mobile\nPhone OTT\nService",
               "description": "",
               "type": "tm.Flow",
               "isTrustBoundary": false,
@@ -294,13 +294,13 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "1. Auth Challenge",
+              "name": "Login",
               "description": "",
               "outOfScope": false,
               "isBidirectional": false,
               "reasonOutOfScope": "",
-              "protocol": "",
-              "isEncrypted": false,
+              "protocol": "TLS",
+              "isEncrypted": true,
               "isPublicNetwork": false,
               "hasOpenThreats": false,
               "threats": [],
@@ -308,14 +308,7 @@
             },
             "id": "35f9f840-c060-4c31-bf9a-0e17a95ddf66",
             "labels": [
-              {
-                "position": 0.5,
-                "attrs": {
-                  "label": {
-                    "text": "Login"
-                  }
-                }
-              }
+              "Login"
             ],
             "source": {
               "cell": "dec51efb-bf55-4b9c-a294-0e45f4e823f6"
@@ -462,8 +455,8 @@
               "outOfScope": false,
               "isBidirectional": false,
               "reasonOutOfScope": "",
-              "protocol": "",
-              "isEncrypted": false,
+              "protocol": "TLS",
+              "isEncrypted": true,
               "isPublicNetwork": false,
               "hasOpenThreats": false,
               "threats": [],
@@ -488,8 +481,8 @@
             },
             "vertices": [
               {
-                "x": 900,
-                "y": 210
+                "x": 790,
+                "y": 230
               }
             ]
           },
@@ -636,8 +629,8 @@
               "outOfScope": false,
               "isBidirectional": false,
               "reasonOutOfScope": "",
-              "protocol": "",
-              "isEncrypted": false,
+              "protocol": "TLS",
+              "isEncrypted": true,
               "isPublicNetwork": false,
               "hasOpenThreats": false,
               "threats": [],
@@ -655,8 +648,8 @@
             },
             "vertices": [
               {
-                "x": 700,
-                "y": 258
+                "x": 630,
+                "y": 320
               }
             ]
           },
@@ -865,33 +858,33 @@
               }
             ],
             "source": {
-              "x": 879,
-              "y": 353
+              "x": 659,
+              "y": 443
             },
             "target": {
-              "x": 878,
-              "y": 353
+              "x": 658,
+              "y": 443
             },
             "vertices": [
               {
-                "x": 799,
-                "y": 353
+                "x": 579,
+                "y": 443
               },
               {
-                "x": 729,
-                "y": 399
+                "x": 509,
+                "y": 489
               },
               {
-                "x": 759,
-                "y": 488
+                "x": 539,
+                "y": 578
               },
               {
-                "x": 1024,
-                "y": 488
+                "x": 804,
+                "y": 578
               },
               {
-                "x": 1049,
-                "y": 360
+                "x": 829,
+                "y": 450
               }
             ]
           },
@@ -986,8 +979,8 @@
             },
             "vertices": [
               {
-                "x": 899,
-                "y": 559
+                "x": 679,
+                "y": 649
               }
             ]
           },
@@ -1064,8 +1057,8 @@
               "outOfScope": false,
               "isBidirectional": false,
               "reasonOutOfScope": "",
-              "protocol": "",
-              "isEncrypted": false,
+              "protocol": "TLS",
+              "isEncrypted": true,
               "isPublicNetwork": false,
               "hasOpenThreats": false,
               "threats": [],
@@ -1093,8 +1086,8 @@
             },
             "vertices": [
               {
-                "x": 760,
-                "y": -10
+                "x": 740,
+                "y": 19
               }
             ]
           },
@@ -1123,8 +1116,8 @@
               "outOfScope": false,
               "isBidirectional": false,
               "reasonOutOfScope": "",
-              "protocol": "",
-              "isEncrypted": false,
+              "protocol": "TLS",
+              "isEncrypted": true,
               "isPublicNetwork": false,
               "hasOpenThreats": false,
               "threats": [],
@@ -1153,7 +1146,7 @@
             "vertices": [
               {
                 "x": 770,
-                "y": 65
+                "y": 90
               }
             ]
           },
@@ -1199,8 +1192,8 @@
           },
           {
             "position": {
-              "x": 760,
-              "y": 405
+              "x": 540,
+              "y": 495
             },
             "size": {
               "width": 120,
