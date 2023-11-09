@@ -1071,15 +1071,15 @@
               "threats": []
             },
             "id": "5592724c-3e31-415a-b65a-e6ee6ab1a1be",
+            "labels": [
+              "Req. Report"
+            ],
             "source": {
               "cell": "800533bf-0329-4f7f-b047-d0a90063cf4d"
             },
             "target": {
               "cell": "09289014-0881-4683-8fbb-0ba2852b05c0"
             },
-            "labels": [
-              "Req. Report"
-            ],
             "vertices": [
               {
                 "x": 250,
@@ -1119,6 +1119,9 @@
               "threats": []
             },
             "id": "dca2c524-7a4b-45ad-a963-0dbbf5a2b5be",
+            "labels": [
+              "signierter \nExcel Report"
+            ],
             "source": {
               "cell": "09289014-0881-4683-8fbb-0ba2852b05c0"
             },
@@ -1130,9 +1133,6 @@
                 "x": 350,
                 "y": -240
               }
-            ],
-            "labels": [
-              "signierter \nExcel Report"
             ]
           },
           {
@@ -1167,15 +1167,15 @@
               "threats": []
             },
             "id": "b244e2ee-a83d-4f22-9312-3eb1668a929f",
+            "labels": [
+              "Req. Raw Data"
+            ],
             "source": {
               "cell": "09289014-0881-4683-8fbb-0ba2852b05c0"
             },
             "target": {
               "cell": "c2716661-ef88-48a8-8d0f-724e1923d562"
             },
-            "labels": [
-              "Req. Raw Data"
-            ],
             "vertices": [
               {
                 "x": 430,
@@ -1215,6 +1215,9 @@
               "threats": []
             },
             "id": "3129f83c-e10e-4158-b850-b66692f00418",
+            "labels": [
+              "Raw Log Data"
+            ],
             "source": {
               "cell": "c2716661-ef88-48a8-8d0f-724e1923d562"
             },
@@ -1226,9 +1229,6 @@
                 "x": 430,
                 "y": -139
               }
-            ],
-            "labels": [
-              "Raw Log Data"
             ]
           },
           {
@@ -1316,15 +1316,15 @@
               "threats": []
             },
             "id": "f4d41fe0-45e4-410f-a0ff-804a4f571996",
+            "labels": [
+              "Überwacht"
+            ],
             "source": {
               "cell": "49b82a20-6545-4160-8baf-cb84af164747"
             },
             "target": {
               "cell": "94f68ce7-aa88-45a4-ba41-c0b62d6a959c"
-            },
-            "labels": [
-              "Überwacht"
-            ]
+            }
           },
           {
             "shape": "flow",
@@ -1358,15 +1358,15 @@
               "threats": []
             },
             "id": "d0e9ec0e-cd65-4b44-b8b2-9227be624a6a",
+            "labels": [
+              "Überwacht"
+            ],
             "source": {
               "cell": "49b82a20-6545-4160-8baf-cb84af164747"
             },
             "target": {
               "cell": "166a4763-016a-486b-92df-a86adc8bab82"
-            },
-            "labels": [
-              "Überwacht"
-            ]
+            }
           },
           {
             "shape": "flow",
@@ -1400,6 +1400,9 @@
               "threats": []
             },
             "id": "d0b82d27-f40c-4a77-bcd2-0abf6c4bd9c2",
+            "labels": [
+              "Sammelt und\nAnalysiert"
+            ],
             "source": {
               "cell": "49b82a20-6545-4160-8baf-cb84af164747"
             },
@@ -1419,9 +1422,6 @@
                 "x": 710,
                 "y": -224
               }
-            ],
-            "labels": [
-              "Sammelt und\nAnalysiert"
             ]
           },
           {
@@ -1507,7 +1507,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "signierte \nReport \nEmail",
-              "description": "",
+              "description": "wöchentlich",
               "outOfScope": false,
               "isBidirectional": false,
               "reasonOutOfScope": "",
@@ -1518,6 +1518,9 @@
               "threats": []
             },
             "id": "c7ecea8f-d3d6-40c5-96a0-0cac6ae33f6a",
+            "labels": [
+              "signierte \nReport \nEmail"
+            ],
             "source": {
               "cell": "49b82a20-6545-4160-8baf-cb84af164747"
             },
@@ -1526,16 +1529,13 @@
             },
             "vertices": [
               {
-                "x": 240,
-                "y": 300
+                "x": 230,
+                "y": 310
               },
               {
                 "x": 140,
                 "y": -110
               }
-            ],
-            "labels": [
-              "signierte \nReport \nEmail"
             ]
           },
           {
@@ -1685,8 +1685,8 @@
             },
             "visible": true,
             "shape": "actor",
-            "id": "800533bf-0329-4f7f-b047-d0a90063cf4d",
             "zIndex": 14,
+            "id": "800533bf-0329-4f7f-b047-d0a90063cf4d",
             "data": {
               "type": "tm.Flow",
               "name": "Management",
@@ -1723,8 +1723,8 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "09289014-0881-4683-8fbb-0ba2852b05c0",
             "zIndex": 15,
+            "id": "09289014-0881-4683-8fbb-0ba2852b05c0",
             "data": {
               "type": "tm.Flow",
               "name": "Excel-Export",
@@ -1761,8 +1761,8 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "49b82a20-6545-4160-8baf-cb84af164747",
             "zIndex": 16,
+            "id": "49b82a20-6545-4160-8baf-cb84af164747",
             "data": {
               "type": "tm.Flow",
               "name": "Data Flow",
