@@ -57,7 +57,7 @@
           {
             "position": {
               "x": 270.99999999999994,
-              "y": -10.999999999999936
+              "y": -10.999999999999943
             },
             "size": {
               "width": 130,
@@ -1101,7 +1101,7 @@
             },
             "vertices": [
               {
-                "x": 250,
+                "x": 240,
                 "y": -230
               }
             ]
@@ -1149,6 +1149,10 @@
             },
             "vertices": [
               {
+                "x": 340,
+                "y": -210
+              },
+              {
                 "x": 350,
                 "y": -240
               }
@@ -1195,12 +1199,7 @@
             "target": {
               "cell": "c2716661-ef88-48a8-8d0f-724e1923d562"
             },
-            "vertices": [
-              {
-                "x": 430,
-                "y": -224
-              }
-            ]
+            "vertices": []
           },
           {
             "shape": "flow",
@@ -1784,7 +1783,7 @@
             "id": "49b82a20-6545-4160-8baf-cb84af164747",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "SIEM",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -1807,6 +1806,6 @@
     ],
     "reviewer": "Georg Neugebauer",
     "diagramTop": 10,
-    "threatTop": 111
+    "threatTop": 133
   }
 }
