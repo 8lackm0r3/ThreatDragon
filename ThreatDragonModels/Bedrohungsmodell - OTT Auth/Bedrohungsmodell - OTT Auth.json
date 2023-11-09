@@ -960,7 +960,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Antwort",
+              "name": "Weiterleitung\nTelefonnummer",
               "description": "",
               "outOfScope": false,
               "isBidirectional": false,
@@ -974,17 +974,7 @@
             },
             "id": "8ecaba74-0e1f-4520-834c-ddec29220d7e",
             "labels": [
-              {
-                "position": {
-                  "distance": 0.6100815863762545,
-                  "offset": -21.27058463543483
-                },
-                "attrs": {
-                  "label": {
-                    "text": "2. Weiterleitung\nTelefonnummer"
-                  }
-                }
-              }
+              "Weiterleitung\nTelefonnummer"
             ],
             "source": {
               "cell": "94f68ce7-aa88-45a4-ba41-c0b62d6a959c"
@@ -994,8 +984,8 @@
             },
             "vertices": [
               {
-                "x": 750,
-                "y": 40
+                "x": 740,
+                "y": 19
               }
             ]
           },
@@ -1760,7 +1750,7 @@
           },
           {
             "position": {
-              "x": 488,
+              "x": 480,
               "y": 228
             },
             "size": {
@@ -1806,6 +1796,6 @@
     ],
     "reviewer": "Georg Neugebauer",
     "diagramTop": 10,
-    "threatTop": 133
+    "threatTop": 141
   }
 }
