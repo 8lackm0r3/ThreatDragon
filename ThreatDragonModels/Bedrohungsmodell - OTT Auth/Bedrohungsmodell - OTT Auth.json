@@ -1789,15 +1789,15 @@
         ],
         "version": "2.1.1",
         "title": "Architekturdiagramm",
-        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
         "id": 0,
-        "diagramType": "STRIDE",
-        "placeholder": "New STRIDE diagram description",
+        "diagramType": "Generic",
+        "placeholder": "New generic diagram description",
         "description": "AllSecure OTT"
       }
     ],
     "reviewer": "Georg Neugebauer",
     "diagramTop": 10,
-    "threatTop": 149
+    "threatTop": 152
   }
 }
