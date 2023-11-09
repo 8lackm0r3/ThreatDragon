@@ -21,8 +21,8 @@
         "cells": [
           {
             "position": {
-              "x": 12,
-              "y": 53
+              "x": -158,
+              "y": 39.00000000000006
             },
             "size": {
               "width": 160,
@@ -239,7 +239,7 @@
           {
             "position": {
               "x": 250.99999999999994,
-              "y": 193
+              "y": 178
             },
             "size": {
               "width": 120,
@@ -623,55 +623,6 @@
             "zIndex": 10,
             "connector": "smooth",
             "data": {
-              "type": "tm.Flow",
-              "name": "OTT",
-              "description": "",
-              "outOfScope": false,
-              "isBidirectional": false,
-              "reasonOutOfScope": "",
-              "protocol": "TLS",
-              "isEncrypted": true,
-              "isPublicNetwork": false,
-              "hasOpenThreats": false,
-              "threats": [],
-              "isTrustBoundary": false
-            },
-            "id": "48acb78a-9180-4346-b3ae-8f364cc7d9a5",
-            "labels": [
-              "OTT"
-            ],
-            "source": {
-              "cell": "fd7303e8-29d2-4d76-bf7d-87eb619ede69"
-            },
-            "target": {
-              "cell": "166a4763-016a-486b-92df-a86adc8bab82"
-            },
-            "vertices": [
-              {
-                "x": 630,
-                "y": 320
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
               "type": "tm.Boundary",
               "name": "Firma Allsecure",
               "description": "",
@@ -709,68 +660,6 @@
               {
                 "x": 326,
                 "y": 170
-              }
-            ]
-          },
-          {
-            "shape": "trust-broundary-curve",
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
-              "name": "Externer Service für T\nelefonnummernauflö\nsung",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
-            },
-            "id": "8c690a8a-f100-4c4d-bd88-095a530ac220",
-            "labels": [
-              {
-                "position": {
-                  "distance": 0,
-                  "offset": 25.336937022630487
-                },
-                "attrs": {
-                  "label": {
-                    "text": "Firma Allsecure"
-                  }
-                }
-              }
-            ],
-            "source": {
-              "x": 241,
-              "y": 135
-            },
-            "target": {
-              "x": 246,
-              "y": 138
-            },
-            "vertices": [
-              {
-                "x": 241,
-                "y": 350
-              },
-              {
-                "x": 623,
-                "y": 156
-              },
-              {
-                "x": 638,
-                "y": -46
-              },
-              {
-                "x": 550,
-                "y": -204
-              },
-              {
-                "x": 340,
-                "y": -174
-              },
-              {
-                "x": 243,
-                "y": -8
               }
             ]
           },
@@ -1086,8 +975,8 @@
             },
             "vertices": [
               {
-                "x": 740,
-                "y": 19
+                "x": 750,
+                "y": 40
               }
             ]
           },
@@ -1146,14 +1035,513 @@
             "vertices": [
               {
                 "x": 770,
-                "y": 90
+                "y": 65
               }
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Req. Report",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "5592724c-3e31-415a-b65a-e6ee6ab1a1be",
+            "source": {
+              "cell": "800533bf-0329-4f7f-b047-d0a90063cf4d"
+            },
+            "target": {
+              "cell": "09289014-0881-4683-8fbb-0ba2852b05c0"
+            },
+            "labels": [
+              "Req. Report"
+            ],
+            "vertices": [
+              {
+                "x": 250,
+                "y": -230
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "signierter \nExcel Report",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "dca2c524-7a4b-45ad-a963-0dbbf5a2b5be",
+            "source": {
+              "cell": "09289014-0881-4683-8fbb-0ba2852b05c0"
+            },
+            "target": {
+              "cell": "800533bf-0329-4f7f-b047-d0a90063cf4d"
+            },
+            "vertices": [
+              {
+                "x": 350,
+                "y": -240
+              }
+            ],
+            "labels": [
+              "signierter \nExcel Report"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Req. Raw Data",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "b244e2ee-a83d-4f22-9312-3eb1668a929f",
+            "source": {
+              "cell": "09289014-0881-4683-8fbb-0ba2852b05c0"
+            },
+            "target": {
+              "cell": "c2716661-ef88-48a8-8d0f-724e1923d562"
+            },
+            "labels": [
+              "Req. Raw Data"
+            ],
+            "vertices": [
+              {
+                "x": 430,
+                "y": -224
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Raw Log Data",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "3129f83c-e10e-4158-b850-b66692f00418",
+            "source": {
+              "cell": "c2716661-ef88-48a8-8d0f-724e1923d562"
+            },
+            "target": {
+              "cell": "09289014-0881-4683-8fbb-0ba2852b05c0"
+            },
+            "vertices": [
+              {
+                "x": 430,
+                "y": -139
+              }
+            ],
+            "labels": [
+              "Raw Log Data"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "OTT",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "TLS",
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": [],
+              "isTrustBoundary": false
+            },
+            "id": "48acb78a-9180-4346-b3ae-8f364cc7d9a5",
+            "labels": [
+              "OTT"
+            ],
+            "source": {
+              "cell": "fd7303e8-29d2-4d76-bf7d-87eb619ede69"
+            },
+            "target": {
+              "cell": "166a4763-016a-486b-92df-a86adc8bab82"
+            },
+            "vertices": [
+              {
+                "x": 610,
+                "y": 390
+              },
+              {
+                "x": 350,
+                "y": 430
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Überwacht",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "f4d41fe0-45e4-410f-a0ff-804a4f571996",
+            "source": {
+              "cell": "49b82a20-6545-4160-8baf-cb84af164747"
+            },
+            "target": {
+              "cell": "94f68ce7-aa88-45a4-ba41-c0b62d6a959c"
+            },
+            "labels": [
+              "Überwacht"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Überwacht",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "d0e9ec0e-cd65-4b44-b8b2-9227be624a6a",
+            "source": {
+              "cell": "49b82a20-6545-4160-8baf-cb84af164747"
+            },
+            "target": {
+              "cell": "166a4763-016a-486b-92df-a86adc8bab82"
+            },
+            "labels": [
+              "Überwacht"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Sammelt und\nAnalysiert",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "d0b82d27-f40c-4a77-bcd2-0abf6c4bd9c2",
+            "source": {
+              "cell": "49b82a20-6545-4160-8baf-cb84af164747"
+            },
+            "target": {
+              "cell": "c2716661-ef88-48a8-8d0f-724e1923d562"
+            },
+            "vertices": [
+              {
+                "x": 640,
+                "y": 170
+              },
+              {
+                "x": 680,
+                "y": -50
+              },
+              {
+                "x": 710,
+                "y": -224
+              }
+            ],
+            "labels": [
+              "Sammelt und\nAnalysiert"
+            ]
+          },
+          {
+            "shape": "trust-broundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Externer Service für T\nelefonnummernauflö\nsung",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "id": "8c690a8a-f100-4c4d-bd88-095a530ac220",
+            "labels": [
+              {
+                "position": {
+                  "distance": 0,
+                  "offset": 25.336937022630487
+                },
+                "attrs": {
+                  "label": {
+                    "text": "Firma Allsecure"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "x": 100,
+              "y": 160
+            },
+            "target": {
+              "x": 100,
+              "y": 170
+            },
+            "vertices": [
+              {
+                "x": 241,
+                "y": 350
+              },
+              {
+                "x": 610,
+                "y": 350
+              },
+              {
+                "x": 710,
+                "y": -30
+              },
+              {
+                "x": 690,
+                "y": -350
+              },
+              {
+                "x": 210,
+                "y": -400
+              },
+              {
+                "x": 90,
+                "y": 0
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "signierte \nReport \nEmail",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "c7ecea8f-d3d6-40c5-96a0-0cac6ae33f6a",
+            "source": {
+              "cell": "49b82a20-6545-4160-8baf-cb84af164747"
+            },
+            "target": {
+              "cell": "800533bf-0329-4f7f-b047-d0a90063cf4d"
+            },
+            "vertices": [
+              {
+                "x": 240,
+                "y": 300
+              },
+              {
+                "x": 140,
+                "y": -110
+              }
+            ],
+            "labels": [
+              "signierte \nReport \nEmail"
+            ]
+          },
+          {
             "position": {
-              "x": 410,
-              "y": -174
+              "x": 493,
+              "y": -240
             },
             "size": {
               "width": 120,
@@ -1177,17 +1565,20 @@
             "zIndex": 11,
             "id": "c2716661-ef88-48a8-8d0f-724e1923d562",
             "data": {
-              "type": "tm.Store",
+              "type": "tm.Flow",
               "name": "Log-DB",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "isALog": true,
               "storesCredentials": false,
-              "isEncrypted": true,
+              "isEncrypted": false,
               "isSigned": true,
               "hasOpenThreats": false,
-              "threats": []
+              "threats": [],
+              "isBidirectional": false,
+              "protocol": "",
+              "isPublicNetwork": false
             }
           },
           {
@@ -1270,6 +1661,120 @@
               "threats": [],
               "isBidirectional": false,
               "protocol": "",
+              "isPublicNetwork": false
+            }
+          },
+          {
+            "position": {
+              "x": 230,
+              "y": -390
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Management"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "800533bf-0329-4f7f-b047-d0a90063cf4d",
+            "zIndex": 14,
+            "data": {
+              "type": "tm.Flow",
+              "name": "Management",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "providesAuthentication": false,
+              "hasOpenThreats": false,
+              "threats": [],
+              "isBidirectional": false,
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false
+            }
+          },
+          {
+            "position": {
+              "x": 236.25,
+              "y": -194
+            },
+            "size": {
+              "width": 100,
+              "height": 100
+            },
+            "attrs": {
+              "text": {
+                "text": "Excel-Export"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "09289014-0881-4683-8fbb-0ba2852b05c0",
+            "zIndex": 15,
+            "data": {
+              "type": "tm.Flow",
+              "name": "Excel-Export",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "privilegeLevel": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "isBidirectional": false,
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false
+            }
+          },
+          {
+            "position": {
+              "x": 488,
+              "y": 228
+            },
+            "size": {
+              "width": 60,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "SIEM"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "49b82a20-6545-4160-8baf-cb84af164747",
+            "zIndex": 16,
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "privilegeLevel": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "isBidirectional": false,
+              "protocol": "",
+              "isEncrypted": false,
               "isPublicNetwork": false
             }
           }
