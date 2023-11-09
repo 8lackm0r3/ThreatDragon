@@ -68,8 +68,8 @@
                 "text": "Login System -\nWebapp +\nMobile App"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -84,8 +84,22 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "threats": [],
-              "hasOpenThreats": false
+              "threats": [
+                {
+                  "id": "698f35de-1cf2-49c7-bfc7-9b3ab1b11973",
+                  "title": "Syn Flooding",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Angreifer macht einen DDoS-Angriff auf das Login System, sodass sich keiner mehr einloggen kann. Er tut dies indem ein Botnetz Syn Flooding betreibt und damit tausende halboffene TCP-Verbindungen erstellt. Das ist besonders effektiv, da keinerlei Redundanzen gegeben sind.\n\nCAPEC-482: TCP Flood\n\nTaktik-ID: T1498.001:\nAdversaries may attempt to cause a denial of service (DoS) by directly sending a high-volume of network traffic to a target. This DoS attack may also reduce the availability and functionality of the targeted system(s) and network. Direct Network Floods are when one or more systems are used to send a high-volume of network packets towards the targeted service's network. Almost any network protocol may be used for flooding. Stateless protocols such as UDP or ICMP are commonly used but stateful protocols such as TCP can be used as well.\n\nDread=\nDamage: 8\nReproducibility: 9\nExploitability: 6\nAffected users: 10\nDiscoverability: 1",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 101,
+                  "score": "6,8"
+                }
+              ],
+              "hasOpenThreats": true
             }
           },
           {
@@ -428,7 +442,12 @@
             "target": {
               "cell": "a1d5bbe6-465f-43bb-bd96-7ce687db37aa"
             },
-            "vertices": []
+            "vertices": [
+              {
+                "x": 450,
+                "y": 100
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -482,7 +501,7 @@
             "vertices": [
               {
                 "x": 790,
-                "y": 230
+                "y": 250
               }
             ]
           },
@@ -1788,6 +1807,6 @@
     ],
     "reviewer": "Georg Neugebauer",
     "diagramTop": 10,
-    "threatTop": 100
+    "threatTop": 111
   }
 }
