@@ -1791,7 +1791,9 @@
         "title": "Architekturdiagramm",
         "thumbnail": "./public/content/images/thumbnail.stride.jpg",
         "id": 0,
-        "diagramType": "STRIDE"
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "description": "AllSecure OTT"
       }
     ],
     "reviewer": "Georg Neugebauer",
