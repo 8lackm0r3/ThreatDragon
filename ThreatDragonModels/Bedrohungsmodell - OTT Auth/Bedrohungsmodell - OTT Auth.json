@@ -105,7 +105,7 @@
                   "severity": "Medium",
                   "type": "Information disclosure",
                   "description": "Fehlermeldungen geben Auskunft über registrierte Email-Adressen\nCAPEC-212: Functionality Misuse\n\nTaktik-ID: T1589.002\nAdversaries may gather email addresses that can be used during targeting. Even if internal instances exist, organizations may have public-facing email infrastructure and addresses for employees.\n\nAdversaries may easily gather email addresses, since they may be readily available and exposed via online or other accessible data sets (ex: Social Media or Search Victim-Owned Websites). Email addresses could also be enumerated via more active means (i.e. Active Scanning), such as probing and analyzing responses from authentication services that may reveal valid usernames in a system. For example, adversaries may be able to enumerate email addresses in Office 365 environments by querying a variety of publicly available API endpoints, such as autodiscover and GetCredentialType.\n\nDread=\nDamage: 5\nReproducibility: 10\nExploitability: 8\nAffected users: 8\nDiscoverability: 4\n",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "1.\n2.\n3.\n4.\n5. 7.4.1 Verify that a generic message is shown when an unexpected or security\nsensitive error occurs, potentially with a unique ID which support personnel\ncan use to investigate.\n6.",
                   "modelType": "Generic",
                   "new": false,
                   "number": 156,
@@ -153,10 +153,10 @@
                   "severity": "Medium",
                   "type": "Tampering",
                   "description": "Keine Inputvalidierung des eingegebenen Nutzernamens. Es wird einfach so in die Log-DB geschrieben.\n\nCAPEC-66",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "1. Nutzen von Input validierung und/oder stored procedures, um injections zu vermeiden\n2. Mithilfe von Pentesting schwachstellen an der Datenbank schnittstelle finden und danach beseitigen\n3.\n4. D3-DQSA\n5. 5.3.4 Verify that data selection or database queries (e.g. SQL, HQL, ORM, NoSQL)\nuse parameterized queries, ORMs, entity frameworks, or are otherwise\nprotected from database injection attacks\n6. MASVS-CODE-4",
                   "modelType": "Generic",
-                  "new": true,
-                  "number": 0,
+                  "new": false,
+                  "number": 191,
                   "score": ""
                 }
               ],
@@ -1127,7 +1127,7 @@
                   "severity": "Medium",
                   "type": "Tampering",
                   "description": "Angreifer ist irgendwie in den Besitz des Privat Keys zum Signieren der Excel-Sheets gekommen und erstellt nun manipulierte Tabellen fürs Management\n\nCAPEC-474\n\nTaktik-ID: T1649\nAdversaries may steal or forge certificates used for authentication to access remote systems or resources. Digital certificates are often used to sign and encrypt messages and/or files. Certificates are also used as authentication material. For example, Azure AD device certificates and Active Directory Certificate Services (AD CS) certificates bind to an identity and can be used as credentials for domain accounts.\n\nDread=\nDamage: 10\nReproducibility: 4\nExploitability: 2\nAffected users: 3\nDiscoverability: 5",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "1. Trusted Hardware Modul verwenden um Schlüssel aufzubewahren\n2. Durch Verwendung von THMs wird sichergestellt, dass nahezu niemand mehr die Schlüssel lesen kann. Bei erfolgreich-versuchter Entwendung löscht sich der Schlüssel selbst.\n3. Exploitability geht runter, aber Damage bleibt hoch.\n4. D3-TBI \n5. 2.9.1: Verify that cryptographic keys used in verification are stored\nsecurely and protected against disclosure, such as using a Trusted\nPlatform Module (TPM) or Hardware Security Module (HSM), or an\nOS service that can use this secure storage.\n6. MASVS-RESILIENCE-1",
                   "modelType": "Generic",
                   "new": false,
                   "number": 186,
@@ -1145,7 +1145,12 @@
             "target": {
               "cell": "800533bf-0329-4f7f-b047-d0a90063cf4d"
             },
-            "vertices": []
+            "vertices": [
+              {
+                "x": 291.25,
+                "y": -240
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -1228,12 +1233,12 @@
               "threats": [
                 {
                   "id": "606b3f24-1c4e-461b-9dba-7b04d28d69ca",
-                  "title": "Nicht verschlüsselte Datenverbindung zum Export",
+                  "title": "Nicht verschlüsselte Datenverbindung zum Export -> MITM",
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Information disclosure",
                   "description": "Angreifer kann einen MITM-Angriff zwischen DB und Export starten und alle Logs mitlesen.\n\nCAPEC-94\n\nTaktik-ID: T1557\nAdversaries may attempt to position themselves between two or more networked devices using an adversary-in-the-middle (AiTM) technique to support follow-on behaviors such as Network Sniffing, Transmitted Data Manipulation, or replay attacks (Exploitation for Credential Access). By abusing features of common networking protocols that can determine the flow of network traffic (e.g. ARP, DNS, LLMNR, etc.), adversaries may force a device to communicate through an adversary controlled system so they can collect information or perform additional actions.\n\nDread=\nDamage: 3\nReproducibility: 5\nExploitability: 3\nAffected users: 10\nDiscoverability: 8",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "1. Datenverkehr zwischen DB und Exportdienst verschlüsseln.\n2. Durch gute/aktuelle verschlüsselung wird verhindert, dass Daten beim Export aus der Datenbank einfach mitgelesen werden können.\n3. Reproducibility und Exploitability sinken\n4. Encrypted Channel - T1573\n5. 1.9.1 Verify the application encrypts communications between components,\nparticularly when these components are in different containers, systems,\nsites, or cloud providers.\n6. MASVS-NETWORK-1",
                   "modelType": "Generic",
                   "new": false,
                   "number": 185,
@@ -1650,12 +1655,12 @@
               "threats": [
                 {
                   "id": "01fc618f-e91b-4994-9bbf-a744039280f0",
-                  "title": "Zugriff auf Logs mit standardpasswort",
+                  "title": "Zugriff auf Logs mit falschen rechten",
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Repudiation",
-                  "description": "Angreifer kann Logs beliebig manipulieren, da ein standardpasswort verwendet wurde.\n\nCAPEC-93\n\nTaktik-ID: T1565.001\nAdversaries may insert, delete, or manipulate data at rest in order to influence external outcomes or hide activity, thus threatening the integrity of the data. By manipulating stored data, adversaries may attempt to affect a business process, organizational understanding, and decision making.\n\nDread=\nDamage: 4\nReproducibility: 7\nExploitability: 8\nAffected users: 0\nDiscoverability: 10",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "description": "Angreifer kann Logs beliebig manipulieren, da Permissions nicht richtig gesetzt sind.\n\nCAPEC-93\n\nTaktik-ID: T1565.001\nAdversaries may insert, delete, or manipulate data at rest in order to influence external outcomes or hide activity, thus threatening the integrity of the data. By manipulating stored data, adversaries may attempt to affect a business process, organizational understanding, and decision making.\n\nDread=\nDamage: 4\nReproducibility: 7\nExploitability: 8\nAffected users: 0\nDiscoverability: 10",
+                  "mitigation": "1. Vernünftige Config des Log-Systems erstellen mit \"Principle of least privilege\"\n2. Nur absolut notwendige Rechte an Nutzer verteilen und nicht einfach ohne Grund adminrechte erheben auf accounts, die nicht ausreichend gesichert sind.\n3. Exploitability und Damage sinken stark, da man nicht mehr so viel machen kann wie vorher.\n4. D3-LFP: Local File Permissions\n5. 1.4.5 Verify that attribute or feature-based access control is used whereby the code\nchecks the user's authorization for a feature/data item rather than just their\nrole. Permissions should still be allocated using roles.\n6.",
                   "modelType": "Generic",
                   "new": false,
                   "number": 176,
@@ -1668,7 +1673,7 @@
                   "severity": "Medium",
                   "type": "Information disclosure",
                   "description": "Es ist möglich gehashte Passwörder wiederzubekommen durch Dictionary-Attacks oder RainbowTables, wenn das Passwort nur gehashed ist.\n\nCAPEC-16\n\nTaktik-ID: T1110.002\n\nAdversaries may use password cracking to attempt to recover usable credentials, such as plaintext passwords, when credential material such as password hashes are obtained. OS Credential Dumping can be used to obtain password hashes, this may only get an adversary so far when Pass the Hash is not an option. Further, adversaries may leverage Data from Configuration Repository in order to obtain hashed credentials for network devices.\n\nDread=\nDamage: 10\nReproducibility: 9\nExploitability: 4\nAffected users: 10\nDiscoverability: 8",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "1. Salt/Pepper auf Passwörter vor Hash\n2. Es ist immer eine gute Idee Passwörter in der Datenbank zu Hashen, allerdings kann es bei schwachen Passwörtern sehr schnell dazu kommen, dass, wenn der Hash in die Hände eines Angreifers gerät, mithilfe einer Dictionary-Attack , das Passwort erraten werden kann.\n3. Damage, Affected users sinken massiv\n4.\n5. 2.4.1 Verify that passwords are stored in a form that is resistant to offline\nattacks. Passwords SHALL be salted and hashed using an approved\none-way key derivation or password hashing function. Key\nderivation and password hashing functions take a password, a salt,\nand a cost factor as inputs when generating a password hash\n6. MASVS-CRYPTO: Cryptography",
                   "modelType": "Generic",
                   "new": false,
                   "number": 190,
@@ -1802,7 +1807,7 @@
                   "severity": "Medium",
                   "type": "Spoofing",
                   "description": "Angreifer gibt sich z.B. als Chef der IT-Abteilung aus, um an Excel-Log-Datei zu kommen.\n\nCAPEC-163\n\nTaktik-ID: T1598\nAdversaries may send phishing messages to elicit sensitive information that can be used during targeting. Phishing for information is an attempt to trick targets into divulging information, frequently credentials or other actionable information. Phishing for information is different from Phishing in that the objective is gathering data from the victim rather than executing malicious code.\n\nDread=\nDamage: 8\nReproducibility: 3\nExploitability: 2\nAffected users: 2\nDiscoverability: 3",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "1. Automatisches überprüfen der Email\n2. Die Email wird gegen eine whitelist gechecked und nur dann weitergeleitet, wenn diese draufsteht. Ansonsten wird die email für manuelle review an einen Mitarbeiter gegeben\n3. Senkung von Reproducibility und Discovery, da man seltener auf Phishing reinfällt\n4. Identifier Analysis -> D3-ID",
                   "modelType": "Generic",
                   "new": false,
                   "number": 183,
@@ -1917,6 +1922,6 @@
     ],
     "reviewer": "Georg Neugebauer",
     "diagramTop": 10,
-    "threatTop": 190
+    "threatTop": 191
   }
 }
