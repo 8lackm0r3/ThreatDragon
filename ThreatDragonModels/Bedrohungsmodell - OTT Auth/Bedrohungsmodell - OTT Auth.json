@@ -87,7 +87,7 @@
               "threats": [
                 {
                   "id": "698f35de-1cf2-49c7-bfc7-9b3ab1b11973",
-                  "title": "Syn Flooding",
+                  "title": "Keine Redundanten Login Systeme",
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Denial of service",
@@ -97,6 +97,19 @@
                   "new": false,
                   "number": 101,
                   "score": "6,8"
+                },
+                {
+                  "id": "6086d5b7-55f9-4059-a0e0-3bec19042e99",
+                  "title": "Registrierte Emails rausfinden",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Fehlermeldungen geben Auskunft über registrierte Email-Adressen\nCAPEC-212: Functionality Misuse\n\nTaktik-ID: T1589.002\nAdversaries may gather email addresses that can be used during targeting. Even if internal instances exist, organizations may have public-facing email infrastructure and addresses for employees.\n\nAdversaries may easily gather email addresses, since they may be readily available and exposed via online or other accessible data sets (ex: Social Media or Search Victim-Owned Websites). Email addresses could also be enumerated via more active means (i.e. Active Scanning), such as probing and analyzing responses from authentication services that may reveal valid usernames in a system. For example, adversaries may be able to enumerate email addresses in Office 365 environments by querying a variety of publicly available API endpoints, such as autodiscover and GetCredentialType.\n\nDread=\nDamage: 5\nReproducibility: 10\nExploitability: 8\nAffected users: 8\nDiscoverability: 4\n",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 156,
+                  "score": "7"
                 }
               ],
               "hasOpenThreats": true
@@ -116,8 +129,8 @@
                 "text": "2-Faktor-Authe\nntifizierungsdi\nenst"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -132,8 +145,22 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "threats": [],
-              "hasOpenThreats": false,
+              "threats": [
+                {
+                  "id": "a2509eb7-b809-4a05-988a-427b0595159a",
+                  "title": "SQL Injections",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Keine Inputvalidierung des eingegebenen Nutzernamens. Es wird einfach so in die Log-DB geschrieben.\n\nCAPEC-66",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "Generic",
+                  "new": true,
+                  "number": 0,
+                  "score": ""
+                }
+              ],
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "protocol": "",
               "isEncrypted": false,
@@ -264,8 +291,8 @@
                 "text": "AllSecure Mobile\nPhone OTT\nService"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -280,8 +307,22 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "threats": [],
-              "hasOpenThreats": false,
+              "threats": [
+                {
+                  "id": "d8b0fb23-4468-43bf-8c00-6a28666747cd",
+                  "title": "Statisches OTT für jeden Nutzer gleich",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "Angreifer könnte statisches Token klauen und es für unerlaubtes Einloggen bei Accounts verwenden, wo das PW bekannt ist.\n\nCAPEC-633\n\nTaktik-ID: T1134.001 \nAdversaries may duplicate then impersonate another user's existing token to escalate privileges and bypass access controls. For example, an adversary can duplicate an existing token using DuplicateToken or DuplicateTokenEx. The token can then be used with ImpersonateLoggedOnUser to allow the calling thread to impersonate a logged on user's security context, or with SetThreadToken to assign the impersonated token to a thread.\n\nDread=\nDamage: 10\nReproducibility: 6\nExploitability: 2\nAffected users: 10\nDiscoverability: 8\n",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 184,
+                  "score": "7,2"
+                }
+              ],
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "protocol": "",
               "isEncrypted": false,
@@ -816,54 +857,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Log(Login, OTT, Phone Number)",
-              "description": "",
-              "outOfScope": false,
-              "isBidirectional": false,
-              "reasonOutOfScope": "",
-              "protocol": "",
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "hasOpenThreats": false,
-              "threats": []
-            },
-            "id": "81c8482c-19ed-41ab-bae2-a5561223b4b5",
-            "labels": [
-              "Log(Login, OTT, Phone Number)"
-            ],
-            "source": {
-              "cell": "94f68ce7-aa88-45a4-ba41-c0b62d6a959c"
-            },
-            "target": {
-              "cell": "c2716661-ef88-48a8-8d0f-724e1923d562"
-            },
-            "vertices": [
-              {
-                "x": 559.5,
-                "y": -60
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Nummer auslesen",
               "description": "",
               "outOfScope": false,
@@ -1100,7 +1093,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1124,8 +1118,22 @@
               "protocol": "",
               "isEncrypted": false,
               "isPublicNetwork": false,
-              "hasOpenThreats": false,
-              "threats": []
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "27127d50-6fd9-4702-ab85-a9734f90a91a",
+                  "title": "Privat Key zum Signieren gestohlen",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Angreifer ist irgendwie in den Besitz des Privat Keys zum Signieren der Excel-Sheets gekommen und erstellt nun manipulierte Tabellen fürs Management\n\nCAPEC-474\n\nTaktik-ID: T1649\nAdversaries may steal or forge certificates used for authentication to access remote systems or resources. Digital certificates are often used to sign and encrypt messages and/or files. Certificates are also used as authentication material. For example, Azure AD device certificates and Active Directory Certificate Services (AD CS) certificates bind to an identity and can be used as credentials for domain accounts.\n\nDread=\nDamage: 10\nReproducibility: 4\nExploitability: 2\nAffected users: 3\nDiscoverability: 5",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 186,
+                  "score": "4,8"
+                }
+              ]
             },
             "id": "dca2c524-7a4b-45ad-a963-0dbbf5a2b5be",
             "labels": [
@@ -1137,16 +1145,7 @@
             "target": {
               "cell": "800533bf-0329-4f7f-b047-d0a90063cf4d"
             },
-            "vertices": [
-              {
-                "x": 340,
-                "y": -210
-              },
-              {
-                "x": 350,
-                "y": -240
-              }
-            ]
+            "vertices": []
           },
           {
             "shape": "flow",
@@ -1189,13 +1188,19 @@
             "target": {
               "cell": "c2716661-ef88-48a8-8d0f-724e1923d562"
             },
-            "vertices": []
+            "vertices": [
+              {
+                "x": 420,
+                "y": -210
+              }
+            ]
           },
           {
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1219,8 +1224,22 @@
               "protocol": "",
               "isEncrypted": false,
               "isPublicNetwork": false,
-              "hasOpenThreats": false,
-              "threats": []
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "606b3f24-1c4e-461b-9dba-7b04d28d69ca",
+                  "title": "Nicht verschlüsselte Datenverbindung zum Export",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Angreifer kann einen MITM-Angriff zwischen DB und Export starten und alle Logs mitlesen.\n\nCAPEC-94\n\nTaktik-ID: T1557\nAdversaries may attempt to position themselves between two or more networked devices using an adversary-in-the-middle (AiTM) technique to support follow-on behaviors such as Network Sniffing, Transmitted Data Manipulation, or replay attacks (Exploitation for Credential Access). By abusing features of common networking protocols that can determine the flow of network traffic (e.g. ARP, DNS, LLMNR, etc.), adversaries may force a device to communicate through an adversary controlled system so they can collect information or perform additional actions.\n\nDread=\nDamage: 3\nReproducibility: 5\nExploitability: 3\nAffected users: 10\nDiscoverability: 8",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 185,
+                  "score": "6,8"
+                }
+              ]
             },
             "id": "3129f83c-e10e-4158-b850-b66692f00418",
             "labels": [
@@ -1232,12 +1251,7 @@
             "target": {
               "cell": "09289014-0881-4683-8fbb-0ba2852b05c0"
             },
-            "vertices": [
-              {
-                "x": 430,
-                "y": -139
-              }
-            ]
+            "vertices": []
           },
           {
             "shape": "flow",
@@ -1547,6 +1561,54 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Log(Login, OTT, Phone Number)",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "81c8482c-19ed-41ab-bae2-a5561223b4b5",
+            "labels": [
+              "Log(Login, OTT, Phone Number)"
+            ],
+            "source": {
+              "cell": "94f68ce7-aa88-45a4-ba41-c0b62d6a959c"
+            },
+            "target": {
+              "cell": "c2716661-ef88-48a8-8d0f-724e1923d562"
+            },
+            "vertices": [
+              {
+                "x": 559.5,
+                "y": -60
+              }
+            ]
+          },
+          {
             "position": {
               "x": 493,
               "y": -240
@@ -1560,11 +1622,13 @@
                 "text": "Log-DB"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1582,8 +1646,35 @@
               "storesCredentials": false,
               "isEncrypted": false,
               "isSigned": true,
-              "hasOpenThreats": false,
-              "threats": [],
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "01fc618f-e91b-4994-9bbf-a744039280f0",
+                  "title": "Zugriff auf Logs mit standardpasswort",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Angreifer kann Logs beliebig manipulieren, da ein standardpasswort verwendet wurde.\n\nCAPEC-93\n\nTaktik-ID: T1565.001\nAdversaries may insert, delete, or manipulate data at rest in order to influence external outcomes or hide activity, thus threatening the integrity of the data. By manipulating stored data, adversaries may attempt to affect a business process, organizational understanding, and decision making.\n\nDread=\nDamage: 4\nReproducibility: 7\nExploitability: 8\nAffected users: 0\nDiscoverability: 10",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 176,
+                  "score": "5,8"
+                },
+                {
+                  "id": "dd693f24-6220-49c0-a178-2ba03f13ebbf",
+                  "title": "Passwörter nur gehashed ohne salt&pepper",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Es ist möglich gehashte Passwörder wiederzubekommen durch Dictionary-Attacks oder RainbowTables, wenn das Passwort nur gehashed ist.\n\nCAPEC-16\n\nTaktik-ID: T1110.002\n\nAdversaries may use password cracking to attempt to recover usable credentials, such as plaintext passwords, when credential material such as password hashes are obtained. OS Credential Dumping can be used to obtain password hashes, this may only get an adversary so far when Pass the Hash is not an option. Further, adversaries may leverage Data from Configuration Repository in order to obtain hashed credentials for network devices.\n\nDread=\nDamage: 10\nReproducibility: 9\nExploitability: 4\nAffected users: 10\nDiscoverability: 8",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 190,
+                  "score": "8,2"
+                }
+              ],
               "isBidirectional": false,
               "protocol": "",
               "isPublicNetwork": false
@@ -1686,8 +1777,8 @@
                 "text": "Management"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1702,8 +1793,22 @@
               "outOfScope": false,
               "reasonOutOfScope": "",
               "providesAuthentication": false,
-              "hasOpenThreats": false,
-              "threats": [],
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "93a26b5d-03b5-43d9-a62a-91f2aac38cd0",
+                  "title": "Spear Phishing im Management",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "Angreifer gibt sich z.B. als Chef der IT-Abteilung aus, um an Excel-Log-Datei zu kommen.\n\nCAPEC-163\n\nTaktik-ID: T1598\nAdversaries may send phishing messages to elicit sensitive information that can be used during targeting. Phishing for information is an attempt to trick targets into divulging information, frequently credentials or other actionable information. Phishing for information is different from Phishing in that the objective is gathering data from the victim rather than executing malicious code.\n\nDread=\nDamage: 8\nReproducibility: 3\nExploitability: 2\nAffected users: 2\nDiscoverability: 3",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 183,
+                  "score": "3,6"
+                }
+              ],
               "isBidirectional": false,
               "protocol": "",
               "isEncrypted": false,
@@ -1762,8 +1867,8 @@
                 "text": "SIEM"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1778,8 +1883,22 @@
               "outOfScope": false,
               "reasonOutOfScope": "",
               "privilegeLevel": "",
-              "hasOpenThreats": false,
-              "threats": [],
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "541727ce-1db5-45f9-8783-b5fb2d7c6f85",
+                  "title": "Standard Passwort für SIEM verwendet",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Elevation of privilege",
+                  "description": "Das verwendete SIEM wurde nicht zu 100% fertig konfiguriert und das Standard - Passwort funktioniert noch. Da ein SIEM über einiges an Rechten in einem Netz verfügt, wäre das eine \"Elevation of Privilege\"\n\nCAPEC-70\n\nTaktik-ID: T1078\nAdversaries may obtain and abuse credentials of existing accounts as a means of gaining Initial Access, Persistence, Privilege Escalation, or Defense Evasion. Compromised credentials may be used to bypass access controls placed on various resources on systems within the network and may even be used for persistent access to remote systems and externally available services, such as VPNs, Outlook Web Access, network devices, and remote desktop. Compromised credentials may also grant an adversary increased privilege to specific systems or access to restricted areas of the network. Adversaries may choose not to use malware or tools in conjunction with the legitimate access those credentials provide to make it harder to detect their presence.\n\nDread=\nDamage: 9\nReproducibility: 6\nExploitability: 8\nAffected users: 3\nDiscoverability: 10",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 181,
+                  "score": "7,2"
+                }
+              ],
               "isBidirectional": false,
               "protocol": "",
               "isEncrypted": false,
@@ -1798,6 +1917,6 @@
     ],
     "reviewer": "Georg Neugebauer",
     "diagramTop": 10,
-    "threatTop": 152
+    "threatTop": 190
   }
 }
